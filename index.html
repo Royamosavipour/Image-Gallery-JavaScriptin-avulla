@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./layout.css">
+    <title>Image Gallery-JavaScriptin-avulla</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <p class="titel">Snaphots</p>
+        <div class="box-gallery">
+            <ul id="title-img">
+                <li> <a href="./images/firworks.avif" title='A Firworks display'
+                        onclick="showPic(this); return false;">Fireworks</a></li>
+                <li> <a href="./images/coffe.avif" title='A cou black coffee'
+                        onclick="showPic(this);return false;">Coffee</a></li>
+                <li> <a href="./images/rose.avif" title='A red,red rose' onclick="showPic(this);return false;">Rose</a>
+                </li>
+                <li> <a href="./images/big-ben.avif" title='The famous clock' onclick="showPic(this);return false;">Big
+                        Bin</a></li>
+
+            </ul>
+
+            <div class="box-img">
+                <img src="./images/my-Gallery.jpg" title="A firworks isply" id="palceholder" alt="My Image Gallry">
+                <p id="description"></p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        function showPic(whichpic) {
+            var boxImg = document.querySelector('.box-img')
+            var source = whichpic.getAttribute('href')
+            var palceholder = document.getElementById('palceholder')
+            palceholder.setAttribute('src', source)
+
+            var showText = whichpic.getAttribute('title')
+            var description = document.querySelector('#description')
+            description.innerHTML = showText
+
+            console.log(showText)
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
